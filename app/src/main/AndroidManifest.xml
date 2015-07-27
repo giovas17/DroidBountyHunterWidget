@@ -1,9 +1,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="softwaremobility.darkgeat.droidbountyhunterwidget">
 
+    <uses-permission android:name="ANDROID.PERMISSION.WRITE_EXTERNAL_STORAGE"/>
+
     <application android:allowBackup="true" android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher" android:theme="@style/AppTheme">
 
+        <receiver android:name=".FugitivosWidget" android:label="droidBHWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="training.giovas.droidbountyhunter.ACTUALIZAR_SEG_WIDGET"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="training.giovas.droidbountyhunter.ACTUALIZAR_WIDGET"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/widget_configuration"/>
+        </receiver>
     </application>
 
 </manifest>

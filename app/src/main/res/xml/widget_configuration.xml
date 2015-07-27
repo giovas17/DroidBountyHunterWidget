@@ -3,5 +3,5 @@
     android:minWidth="180dip"
     android:minHeight="110dip"
     android:label="droidBHWidget"
-    android:updatePeriodMillis="1800000"
+    android:updatePeriodMillis="3600000"
 />
